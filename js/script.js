@@ -41,10 +41,25 @@ $(function() {
   });
 });
 
+// Smooth Scrolling
+$(document).ready(function(){
+  $(".about-arrow a[href='#num2']").on('click', function(event){
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+
 // about us fade in when scroll
 /*$(document).ready(function() {
   $(window).scroll(function(){
-    $('.about').each(function(i){
+    $('#').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       if(bottom_of_window > bottom_of_object) {
