@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 // Element Fadein when page reload
 $(document).ready(function(){
-  $("#hexGrid").fadeIn(1500)
+  $("#hexGrid").fadeIn(800)
 });
 
 // .modal-backdrop
@@ -35,7 +35,7 @@ $(function() {
     videoSRC = $(this).attr("data-video"),
     videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
     $(theModal + ' iframe').attr('src', videoSRCauto);
-    $(theModal + ' button.close').click(function() {
+    $(theModal + ' button.close-modal').click(function() {
       $(theModal + ' iframe').attr('src', videoSRC);
     });
   });
@@ -56,15 +56,46 @@ $(document).ready(function(){
   });
 })
 
-// about us fade in when scroll
+// Fade in when hover
+/*$(function() {
+  $(".hex a").hover(function() {
+    $(".hex p").fadeIn();
+  }, function() {
+    $(".hex p").fadeOut();
+  });
+});
+$('.hex a').mouseover(function() {
+  $(this).children('.hex p').stop()animate(
+    {opacity:1},300);
+});
+
+$('.hex a').mouseleave(function() {
+  $(this).children('.hex p').stop()animate(
+    {opacity:0},500);
+});
+$('.hex a').mouseover(function(){
+    //show the box
+    $(this).children('.hex p').stop().animate({opacity:1},300);
+});
+$('.hex a').mouseleave(function(){
+    //hide the box
+    $(this).children('.hex p').stop().animate({opacity:0},500);
+});*/
+
+// Fade In on page reload
 /*$(document).ready(function() {
-  $(window).scroll(function(){
-    $('#').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+  $('#hexGrid').fadeIn("fast")
+});*/
+// about us fade in when scroll
+/*$(function() {
+  $(window).scroll( function(){
+    $('#').each( function(i){
+      var bottom_of_object = $(this).position().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      if(bottom_of_window > bottom_of_object) {
-        $(this).animate({'opacity':'1'}, 500);
+      bottom_of_window = bottom_of_window + 200;
+      if( bottom_of_window > bottom_of_object ){
+          $(this).animate({'opacity':'1'},500);
       }
     });
   });
-})*/
+});*/
