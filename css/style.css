@@ -1,5 +1,5 @@
 /* === Google Font === */
-@import url('https://fonts.googleapis.com/css?family=Chathura|Jaldi|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Chathura|Jaldi|Montserrat|Italiana');
 /* === Global ===
 h2 {
   font-family: 'Lora', serif;
@@ -242,6 +242,7 @@ h4, p {
 
 /*** Hex Content ***/
 .hex img {
+  opacity: 0.3;
   left: -100%;
   right: -100%;
   width: auto;
@@ -255,33 +256,83 @@ h4, p {
   letter-spacing: 2px;
   width: 100%;
   padding: 50% 5%;
-  font-weight: bold;
   top: 0%;
   color: white;
   right: 0;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.hex-text {
+  font-family: 'Italiana', serif;
+}
+
+@media screen and (max-device-width: 360px) {
+  .hex p {
+    font-size: 9px !important;
+  }
+
+  #hex2 p, #hex3 p, #hex7 p, #hex8 p, #hex9 p {
+    opacity: 0;
+  }
+
+  #hex2 img, #hex3 img, #hex7 img, #hex8 img, #hex9 img {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-device-width: 414px) {
+  .hex p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-device-width: 1025px) {
   .hex p {
     opacity: 0;
   }
+
+  .hex img {
+    opacity: 1;
+  }
+
   .hexIn:hover img {
     opacity: 0.3;
     filter: alpha(opacity=80);
-    transition: 0.5s;
+    transition: 1s;
     width: auto;
     height: 115%;
   }
 
   .hex:hover p {
     opacity: 1;
-    transition: 0.5s;
+    transition: 2s;
   }
 }
 
 @media screen and (device-width: 1366px) and (orientation: landscape) {
   .hex p {
+    opacity: 1;
+  }
+
+  .hex img {
+    opacity: 0.3;
+  }
+
+  #hex2 p, #hex3 p, #hex7 p, #hex8 p, #hex9 p {
+    opacity: 0;
+  }
+
+  #hex2 img, #hex3 img, #hex7 img, #hex8 img, #hex9 img {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-device-width: 1025px) {
+  #hex2 p, #hex3 p, #hex7 p, #hex8 p, #hex9 p {
+    opacity: 0;
+  }
+
+  #hex2 img, #hex3 img, #hex7 img, #hex8 img, #hex9 img {
     opacity: 1;
   }
 }
@@ -552,49 +603,6 @@ h4, p {
   }
 }
 
-
-/*.about-row {
-  background-color: white;
-}
-
-.about-bg {
-  background: url("../bilder/bw28.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 400px;
-}
-
-.about-bg .img-responsive {
-  display: block;
-  width: auto;
-  max-height: 100%;
-}
-
-.about-content {
-  padding: 20px 30px 0 30px;
-  background-color: white;
-  color: black;
-}
-
-.about-content h3 {
-  padding-bottom: 20px;
-}
-
-.about-content p {
-  padding-bottom: 10px
-}
-
-.about-act {
-  background-color: #f5f5f5;
-  color: black;
-}
-
-.about-act-col {
-  padding: 25px;
-}*/
-
 /*** modal-fullscreen size ***/
 .modal-fullscreen .modal-dialog {
   margin-left: 0;
@@ -647,7 +655,7 @@ h4, p {
 }
 
 .modal-video {
-  margin-top: 5px;
+  padding-top: 20px;
 }
 
 .modal-video iframe {
@@ -670,10 +678,11 @@ h4, p {
   font-family: 'Jaldi', sans-serif;
   font-size: 35px;
   margin-top: 10px;
+  letter-spacing: 1px;
 }
 
 .modal-info p {
-  font-size: 12px;;
+  font-size: 12px;
 }
 
 .modal-info h4 {
@@ -685,6 +694,7 @@ h4, p {
 
 .modal-info h4, p {
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2px;
 }
 
 @media (device-width: 768px) {
@@ -696,7 +706,7 @@ h4, p {
 
 @media (min-device-width: 768px) {
   .modal-info {
-    width: 99.333333%;
+    width: 99.333333% !important;
   }
 }
 
@@ -779,6 +789,7 @@ h4, p {
 
 /* === Footer === */
 footer {
-  background-color: #2d2d30;
+  background-color: white;
+  /*background-color: #2d2d30;*/
   color: #f5f5f5;
 }
