@@ -9,7 +9,7 @@ function closeNav() {
 
 // === Service Fade In ===
 $(document).ready(function(){
-  $('.service-content').fadeIn(1000)
+  $('.service-content').fadeIn(4000)
 });
 
 // Element Fadein when page reload
@@ -87,9 +87,9 @@ $('.hex a').mouseleave(function(){
   $('#hexGrid').fadeIn("fast")
 });*/
 // about us fade in when scroll
-/*$(function() {
+$(function() {
   $(window).scroll( function(){
-    $('#').each( function(i){
+    $('.tagline, .aboutus').each( function(i){
       var bottom_of_object = $(this).position().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       bottom_of_window = bottom_of_window + 200;
@@ -98,4 +98,4 @@ $('.hex a').mouseleave(function(){
       }
     });
   });
-});*/
+});
