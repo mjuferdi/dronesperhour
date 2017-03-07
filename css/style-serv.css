@@ -355,7 +355,7 @@ h4, p {
   }
 }
 
-@media screen and (max-device-width: 1025px) {
+@media screen and (max-device-width: 1024px) {
   .hex p {
     opacity: 1;
   }
